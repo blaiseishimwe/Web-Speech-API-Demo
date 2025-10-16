@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Speech API DEMO</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div>
+        <h2>Speech Recognition</h2>
+        <p>
+          The Speech recognition is accessed via the SpeechRecognition
+          interface, which provides the ability to recognize voice context from
+          an audio source and allows your app to respond appropriately.
+          <br />[cfr MDN Web Speech API]
+        </p>
+
+        <div id="rec-results">
+          <h2>
+            list of colors: Green, Blue, Red, Yellow, Black and white.<br />
+            Click start button and say a color form the list of colors to change
+            the background color of this element.
+          </h2>
+        </div>
+
+        <button id="start" class="btn">Start Listening</button>
+
+        <div id="rec-display">Input placeholder.</div>
+        <button id="stop" class="btn">Stop Listening</button>
+      </div>
+      <div>
+        <h2>Speech synthesis</h2>
+
+        <p>
+          Type or paste text in the input field, select the desired accent, and
+          press speak to listen. Pause and Resume as needed, and Clear input to
+          remove all utterances from the utterance queue. Multiple pending
+          utterances will cause the demo to crash.
+        </p>
+        <form id="form">
+          <div>
+            <textarea
+              id="text-input"
+              cols="30"
+              rows="10"
+              placeholder="your text input goes here..."
+            ></textarea>
+          </div>
+          <div>
+            <select id="voice-select"></select>
+          </div>
+          <button type="submit" class="btn">Speak</button>
+        </form>
+        <button id="pause-btn" class="btn">Pause</button>
+        <button id="clear-btn" class="btn">Clear</button>
+      </div>
+    </section>
+  </body>
+</html>
